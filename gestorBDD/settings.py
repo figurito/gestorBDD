@@ -74,12 +74,26 @@ WSGI_APPLICATION = 'gestorBDD.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+''' SQLite3
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+'''
+# PostgreSQL
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'prueba',
+        'USER':'postgres',
+        'PASSWORD':'LAcasona',
+        'HOST':'127.0.0.1',
+        'DATABASE_POST':'5432',
+    }
+}
+
 
 
 # Password validation
